@@ -114,7 +114,7 @@ def dispatch_stats(stats):
     Converts the stats to collectd.Values and dispatches them
     """
     for row in stats:
-        value = collectd.Values(plugin="syslog-ng", type="gauge")
+        value = collectd.Values(plugin="syslog-ng", type="counter")
         key = format_key(row)
         if not key:
             continue
