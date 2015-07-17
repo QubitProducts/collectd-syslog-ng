@@ -8,7 +8,7 @@ import StringIO
 
 MGMT_SOCK_PATH = "/var/lib/syslog-ng/syslog-ng.ctl"
 BUFFER_SIZE = 4096
-VESBOSE = False
+VERBOSE = False
 
 
 def configure_callback(conf):
