@@ -25,7 +25,7 @@ def configure_callback(conf):
         elif node.key == "BufferSize":
             BUFFER_SIZE = int(node.values[0])
         elif node.key == "Verbose":
-            VERBOSE = node.values[0].lower() == "true"
+            VERBOSE = str(node.values[0]).lower() == "true"
         else:
             collectd.warning("syslog-ng plugin: Unknown config key: %s."
                              % node.key)
