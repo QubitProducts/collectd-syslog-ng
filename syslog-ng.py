@@ -103,7 +103,7 @@ def format_key(row):
 
     stype = row["Type"]
     if not stype:
-        collectd.warning("Row had no type: %s" % row)
+        log_verbose("Row had no type: %s" % row)
         return
 
     return ".".join((sname, sid, sinst, stype))
